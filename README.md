@@ -25,9 +25,49 @@ Has many of the packages that I have used over the years for various projects.
 
 ## Developing
 ```bash
-# Add a new shadcn-svelte component
-npm shadd <component_name>
+# Created a convenient helper script to add new shadcn-svelte components
+npm shadd <component>
+# OR
+pnpm shadd <component>
+# OR
+bun shadd <component>
+
 ```
+
+### Aliases
+ I added some helpful aliases after learning / failing in past projects.
+
+`svelte.config.js`
+ ```js
+ /** @type {import('@sveltejs/kit').Config} */
+const config = {
+	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
+	// for more information about preprocessors
+	preprocess: [vitePreprocess({})],
+
+	kit: {
+		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
+		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
+		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
+		adapter: adapter(),
+    alias: {
+      $assets: 'src/lib/assets',
+      $base: 'src/*',
+      $components: 'src/lib/components',
+      $client: 'src/lib/client',
+      $schemas: 'src/lib/schemas',
+      $server: 'src/lib/server',
+    }
+	}
+};
+ ```
+  - `$base` - I mainly use this as a convenience for the app.css file. It really helps with deeply nested layouts. So having:
+  ```js
+  // Replaces:
+  import "../app.css" || "../../../app.css"
+  // With:
+  import "$base/app.css"
+  ```
 
 ## Building
 
