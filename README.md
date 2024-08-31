@@ -1,28 +1,32 @@
-# create-svelte
+# SvelteKit Template
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+_Almost_ everything you need to build a SvelteKit project.
+Has many of the packages that I have used over the years for various projects.
 
-## Creating a project
+## Installed Packages
 
-If you're seeing this, you've probably already done this step. Congrats!
+ - [Bits-UI](https://github.com/huntabyte/bits-ui#readme)
+ - [Chart.js](https://www.chartjs.org)
+ - [Http-status-codes](https://github.com/prettymuchbryce/http-status-codes#readme)
+ - [Iconify](https://github.com/iconify/iconify)
+ - [KitRoutes](https://www.kitql.dev/docs/tools/06_vite-plugin-kit-routes#installation)
+ - [Lucia-Auth](https://github.com/lucia-auth/lucia)
+ - [Lucide](https://lucide.dev)
+ - [Mode-watcher](https://github.com/svecosystem/mode-watcher#readme)
+ - [Postcss](https://postcss.org/)
+ - [Prisma](https://www.prisma.io)
+ - [Shadcn-svelte](https://www.shadcn-svelte.com/)
+ - [Superforms](https://superforms.rocks)
+ - [Svelte-french-toast](https://github.com/kbrgl/svelte-french-toast#readme)
+ - [Tailwind](https://tailwindcss.com)
+ - [Vite](https://vitejs.dev)
+ - [Zod](https://zod.dev)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
 
 ## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# Add a new shadcn-svelte component
+npm shadd <component_name>
 ```
 
 ## Building
